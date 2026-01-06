@@ -7,7 +7,7 @@ https://pastebin-frontend-rouge.vercel.app
 
  Backend API (Render)
 
-https://pastebin-backend.onrender.com
+https://pastebin-backend-pebe.onrender.com
 
 2️⃣ Public Git Repository
 
