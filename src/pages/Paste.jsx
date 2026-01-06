@@ -7,7 +7,7 @@ export default function Paste() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/paste/${id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/paste/${id}`)
       .then(res => {
         if (!res.ok) throw new Error("Expired or not found");
         return res.json();
