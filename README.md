@@ -1,16 +1,110 @@
-# React + Vite
+1️⃣ Deployed URL
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ Frontend (Vercel)
 
-Currently, two official plugins are available:
+https://pastebin-frontend-rouge.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+ Backend API (Render)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://pastebin-backend.onrender.com
 
-## Expanding the ESLint configuration
+2️⃣ Public Git Repository
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ Frontend Repo
+
+https://github.com/saurabhanand96310/pastebin-frontend
+
+
+ Backend Repo
+
+https://github.com/saurabhanand96310/pastebin-backend
+
+
+Pastebin-like Web Application
+
+A simple Pastebin-style web application that allows users to store and share text content using a unique URL.
+Pastes can optionally expire based on time or number of views.
+
+Running the App Locally
+Prerequisites
+
+Node.js (v18+)
+
+MongoDB Atlas account
+
+Backend
+cd backend
+npm install
+npm start
+
+
+Create a .env file:
+
+MONGO_URI=<mongodb_connection_string>
+FRONTEND_URL=http://localhost:5173
+PORT=5000
+
+
+Backend runs on:
+
+http://localhost:5000
+
+Frontend
+cd frontend
+npm install
+npm run dev
+
+
+Create a .env file:
+
+VITE_API_URL=http://localhost:5000
+
+
+Frontend runs on:
+
+http://localhost:5173
+
+🗄 Persistence Layer
+
+MongoDB Atlas (cloud-hosted)
+
+Mongoose ODM
+
+Single collection (Paste) stores:
+
+content
+
+expiration time
+
+view limits
+
+view count
+
+This approach keeps the system simple and avoids unnecessary complexity.
+
+ Build & Runtime Notes (VERY IMPORTANT)
+
+Uses standard commands:
+
+npm install
+
+npm start / npm run dev
+
+No manual database migrations
+
+No shell access required post-deployment
+
+Application starts successfully on first deploy
+
+✅ Status Codes Used
+Case	            Status
+Paste created	    201
+Invalid request  	400
+Paste found     	200
+Paste expired    	410
+Not found	        404
+
+👤 Author
+
+Saurabh Anand
